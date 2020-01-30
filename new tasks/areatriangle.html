@@ -1,0 +1,30 @@
+<html>
+    <body>
+     <script>
+var breadth=document.createElement("input");
+breadth.setAttribute("type","text");
+breadth.setAttribute("id","t1")
+document.body.appendChild(breadth);
+var height=document.createElement("input");
+height.setAttribute("type","text");
+height.setAttribute("id","t2")
+document.body.appendChild(height);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateArea";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("t1").value);
+    var num2=parseInt(document.getElementById("t2").value);
+    var diameter=(num*num2)/2;
+    console.log(diameter);
+    result.value=diameter;
+}
+
+</script>
+</body>
+</html>

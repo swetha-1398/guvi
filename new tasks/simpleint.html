@@ -1,0 +1,39 @@
+<html>
+    <body>
+     <script>
+var principal=document.createElement("input");
+principal.setAttribute("type","text");
+principal.setAttribute("id","t1")
+document.body.appendChild(principal);
+lineBreak2=document.createElement("br");
+document.body.appendChild(lineBreak2);
+var rate=document.createElement("input");
+rate.setAttribute("type","text");
+rate.setAttribute("id","t2")
+document.body.appendChild(rate);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+var time =document.createElement("input");
+time.setAttribute("type","text");
+time.setAttribute("id","t3")
+document.body.appendChild(time);
+lineBreak1=document.createElement("br");
+document.body.appendChild(lineBreak1);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateSI";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("t1").value);
+    var num2=parseInt(document.getElementById("t2").value);
+    var num3=parseInt(document.getElementById("t3").value);
+    var diameter=num*(1+(num2*num3));
+    console.log(diameter);
+    result.value=diameter;
+}
+
+</script>
+</body>
+</html>

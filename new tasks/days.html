@@ -1,0 +1,53 @@
+<html>
+    <body>
+     <script>
+var radius=document.createElement("input");
+radius.setAttribute("type","text");
+radius.setAttribute("id","1")
+document.body.appendChild(radius);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateYears";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("1").value);
+    var diameter=num/365;
+    console.log(diameter);
+    result.value=diameter;
+}
+lineBreak1=document.createElement("br");
+document.body.appendChild(lineBreak1);
+let next =document.createElement("button");
+document.body.appendChild(next);
+next.innerHTML="calculateWeeks";
+next.addEventListener("click",calcCircumference);
+let result1 =document.createElement("input");
+document.body.appendChild(result1);
+function calcCircumference(){
+    var num=parseInt(document.getElementById("1").value);
+    var circumference=num/7;
+    console.log(circumference);
+    result1.value=circumference;
+}
+lineBreak2=document.createElement("br");
+document.body.appendChild(lineBreak2);
+let areas =document.createElement("button");
+document.body.appendChild(areas);
+areas.innerHTML="calculateDays";
+areas.addEventListener("click",calcArea);
+let result2 =document.createElement("input");
+document.body.appendChild(result2);
+function calcArea(){
+    var num=parseInt(document.getElementById("1").value);
+    var Area=num/1;
+    console.log(Area);
+    result2.value=Area;
+}
+
+</script>
+</body>
+</html>

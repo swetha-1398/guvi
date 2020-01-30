@@ -1,0 +1,40 @@
+<html>
+    <body>
+     <script>
+var centi=document.createElement("input");
+centi.setAttribute("type","text");
+centi.setAttribute("id","t1")
+document.body.appendChild(centi);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateMeter";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("t1").value);
+    var diameter=num/100;
+    console.log(diameter);
+    result.value=diameter;
+}
+lineBreak1=document.createElement("br");
+document.body.appendChild(lineBreak1);
+let next =document.createElement("button");
+document.body.appendChild(next);
+next.innerHTML="calculatekm";
+next.addEventListener("click",calcCircumference);
+let result1 =document.createElement("input");
+document.body.appendChild(result1);
+function calcCircumference(){
+    var num=parseInt(document.getElementById("t1").value);
+    var circumference=num/100000;
+    console.log(circumference);
+    result1.value=circumference;
+}
+
+
+</script>
+</body>
+</html>

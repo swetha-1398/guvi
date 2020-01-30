@@ -1,0 +1,27 @@
+<html>
+    <body>
+     <script>
+var celcius=document.createElement("input");
+celcius.setAttribute("type","text");
+celcius.setAttribute("id","t1")
+document.body.appendChild(celcius);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateFarenhit";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("t1").value);
+    var diameter=(num*(9/5))+32;
+    console.log(diameter);
+    result.value=diameter;
+}
+
+
+
+</script>
+</body>
+</html>

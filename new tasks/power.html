@@ -1,0 +1,30 @@
+<html>
+    <body>
+     <script>
+var centi=document.createElement("input");
+centi.setAttribute("type","text");
+centi.setAttribute("id","1")
+document.body.appendChild(centi);
+var number=document.createElement("input");
+number.setAttribute("type","text");
+number.setAttribute("id","t2")
+document.body.appendChild(number);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculatePower";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("1").value);
+    var num2=parseInt(document.getElementById("t2").value);
+    var diameter=Math.pow(num, num2);
+    console.log(diameter);
+    result.value=diameter;
+}
+
+</script>
+</body>
+</html>

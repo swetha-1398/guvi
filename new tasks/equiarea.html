@@ -1,0 +1,25 @@
+<html>
+    <body>
+     <script>
+var side=document.createElement("input");
+side.setAttribute("type","text");
+side.setAttribute("id","1")
+document.body.appendChild(side);
+lineBreak=document.createElement("br");
+document.body.appendChild(lineBreak);
+let myarea =document.createElement("button");
+document.body.appendChild(myarea);
+myarea.innerHTML="calculateArea";
+myarea.addEventListener("click",calcDiameter);
+let result =document.createElement("input");
+document.body.appendChild(result);
+function calcDiameter(){
+    var num=parseInt(document.getElementById("1").value);
+    var diameter=(1.732/4)*(num*num);
+    console.log(diameter);
+    result.value=diameter;
+}
+
+</script>
+</body>
+</html>
